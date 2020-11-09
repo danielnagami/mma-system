@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMASystem", "MMASystem\MMASystem.csproj", "{E6728032-ACED-45E5-B47D-D124A322A4B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6728032-ACED-45E5-B47D-D124A322A4B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6728032-ACED-45E5-B47D-D124A322A4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6728032-ACED-45E5-B47D-D124A322A4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6728032-ACED-45E5-B47D-D124A322A4B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF291D62-F3C2-4598-8C2F-36C2C3CA0B6D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+﻿@using (Html.BeginForm("UploadFingerPrint", "Login", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+{
+    <label class="choose-file-button" for="file">Upload your fingerprint:</label>
+    <input class="submit-button" type="file" name="file" id="file" />
+
+    <input type="submit" />
+}

@@ -1,0 +1,32 @@
+﻿@model MMASystem.Models.User
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("InsertUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <p>First name:</p>
+    <br />
+    <input id="FirstName" name="FirstName" />
+    <br />
+    <p>Last name:</p>
+    <input id="LastName" name="LastName" />
+    <br />
+    <select name="Cargo" id="Cargo">
+        <option value="Todos">Todos</option>
+        <option value="Diretor">Diretor</option>
+        <option value="Ministro">Ministro</option>
+    </select>
+    <br />
+    <input type="file" id="FingerprintReceiver" name="FingerprintReceiver" size="23" />
+    <br />
+    <p>
+        <input type="submit" value="Upload file" />
+    </p>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
