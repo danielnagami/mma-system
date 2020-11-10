@@ -15,11 +15,17 @@ namespace MMASystem.Controllers
         }
 
         [HttpPost, Route("UploadFingerPrint")]
-        public string UploadFingerPrint(HttpPostedFileBase file)
+        public ActionResult UploadFingerPrint(HttpPostedFileBase file)
         {
             var biometryComparer = new BiometryComparer(Image.FromStream(file.InputStream, true, true));
-            biometryComparer.Execute();
-            return "test";
+            var user = biometryComparer.Execute();
+            if(user != null)
+            {
+                return RedirectToAction("Index", "Home");
+
+            }
+            ViewBag.Error = "Fingerprint not found";
+            return View("Index");
         }
 
         public ActionResult Create()

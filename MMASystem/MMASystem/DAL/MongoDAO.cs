@@ -1,6 +1,7 @@
 ﻿using MMASystem.Models;
 using MongoDB.Driver;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 
 namespace MMASystem.DAL
@@ -21,6 +22,18 @@ namespace MMASystem.DAL
             try
             {
                 Collection.InsertOne(user);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public List<User> Read()
+        {
+            try
+            {
+                return Collection.Find<User>(x => x.Fingerprint != null).ToList();
             }
             catch (Exception e)
             {

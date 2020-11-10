@@ -28,5 +28,13 @@ namespace MMASystem.Services
         //        return target.ToArray();
         //    }
         //}
+
+        public static Image ByteArrayToImage(byte[] byteArray)
+        {
+            using (var ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
+            }
+        }
     }
 }
