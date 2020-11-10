@@ -20,10 +20,11 @@ namespace MMASystem.Controllers
             var biometryComparer = new BiometryComparer(Image.FromStream(file.InputStream, true, true));
             var user = biometryComparer.Execute();
             if(user != null)
-            {
-                return RedirectToAction("Index", "Home");
-
-            }
+                return RedirectToAction("ShowUser", "Home", new { 
+                                                                    FirstName = user.FirstName, 
+                                                                    LastName = user.LastName, 
+                                                                    Cargo = user.Cargo 
+                                                                });
             ViewBag.Error = "Fingerprint not found";
             return View("Index");
         }

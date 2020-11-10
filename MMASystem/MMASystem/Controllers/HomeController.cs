@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using MMASystem.Models;
 using System.Web.Mvc;
 
 namespace MMASystem.Controllers
@@ -25,6 +22,11 @@ namespace MMASystem.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult ShowUser(User user)
+        {
+            return View(user);
         }
     }
 }

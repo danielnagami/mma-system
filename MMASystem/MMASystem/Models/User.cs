@@ -1,6 +1,5 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System.Collections.Generic;
 
 namespace MMASystem.Models
 {
@@ -13,13 +12,6 @@ namespace MMASystem.Models
         public byte[] Fingerprint { get; set; }
         [BsonIgnore]
         public object FingerprintReceiver { get; set; }
-        public IEnumerable<Cargos> Cargo { get; set; }
-    }
-
-    public enum Cargos
-    {
-        Todos,
-        Diretor,
-        Ministro
+        public string Cargo { get; set; }
     }
 }

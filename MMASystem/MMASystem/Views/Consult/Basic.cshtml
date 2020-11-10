@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MMASystem.Models.Properties>
+
+@{
+    ViewBag.Title = "Basic";
+}
+
+<h2>Basic</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsaAgrotóxico)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsaAgrotóxico)
+        </td>
+    </tr>
+}
+
+</table>
